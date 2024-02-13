@@ -4,32 +4,32 @@
 #include <iostream>;
 using namespace std;
 
-int main()
-{
+bool isNewRecordScore(double distance, double score);
 
-    int result;
+int main() {
 
-    {
-        cout << "how are you today \n (1 = Good) \n (2 = Bad)  \n Enter a value: ";
-        cin >> result;
+	double  recordScore;
+	cout << "Enter the curent world 100m Sprint record \n";
+	cin >> recordScore;
 
-        if (1 == result)
-        {
-            cout << "That is great";
+	double score;
+	cout << "Enter your score\n";
+	cin >> score;
 
-        }
-        else cout << "Why is this";
+	bool isNewRecord = isNewRecordScore(recordScore, score);
 
+	if (isNewRecord) {
 
-    }
+		cout << "you now hold the new record";
+	}
+
+	else {
+		cout << ("you did not beat the record");
+	}
+
 }
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+bool isNewRecordScore(double recordScore, double score) {
+
+	return (recordScore < score);
+}

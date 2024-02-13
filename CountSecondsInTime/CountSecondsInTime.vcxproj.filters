@@ -18,5 +18,8 @@
     <ClCompile Include="CountSecondsInTime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="readme.md">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -13,26 +13,27 @@ double TimeInSeconds(int hh, int mm, int ss) {
 	return TimeInSeconds;
 
 }
-	int main()
-	{
+int main()
+{
 
 
-		int hh;
-		cout << "Enter the amount of hours: ";
-		cin >> hh;
 
-			int mm;
-		cout << "Enter the amount of minutes: ";
-			cin >> mm;
+	int hh;
+	cout << "Enter the amount of hours: ";
+	cin >> hh;
 
-			int ss;
-		cout << "Enter the amount of seconds: ";
-			cin >> ss;
+	int mm;
+	cout << "Enter the amount of minutes: ";
+	cin >> mm;
+
+	int ss;
+	cout << "Enter the amount of seconds: ";
+	cin >> ss;
 
 
-			cout << "the total time in seconds is " << TimeInSeconds(hh, mm, ss);
+	cout << "the total time in seconds is " << TimeInSeconds(hh, mm, ss);
 
-		return 0;
-	}
+	return 0;
+}
 
 

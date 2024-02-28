@@ -7,7 +7,7 @@ double NetPay(double grossPay, double taxFreeAllowance, double rateOfTax);
 double NetPay(double grossPay, double taxFreeAllowance, double rateOfTax) {
 
 
-	double NetPay = (grossPay - taxFreeAllowance) * (1 - rateOfTax / 100.0);
+	double NetPay = (grossPay - taxFreeAllowance) * (rateOfTax / 100.0);
 	return NetPay;
 }
 
@@ -19,18 +19,18 @@ int main()
 	double rateOfTax;
 
 	cout << "Enter you total annual gross pay: ";
-		cin >> grossPay;
+	cin >> grossPay;
 
 	cout << "Enter your tax free allowance: ";
-		cin >> taxFreeAllowance;
+	cin >> taxFreeAllowance;
 
 
 	cout << "Enter your rate of tax: ";
-		cin >> rateOfTax;
+	cin >> rateOfTax;
 
-		
 
-	cout << "your gross pay is " << NetPay(grossPay, taxFreeAllowance,rateOfTax);
+
+	cout << "your gross pay is " << NetPay(grossPay, taxFreeAllowance, rateOfTax);
 
 	return 0;
 }

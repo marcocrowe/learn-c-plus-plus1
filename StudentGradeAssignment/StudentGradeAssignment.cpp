@@ -11,7 +11,7 @@ void UpGradesByOne(char grades[], int size);
 int main()
 {
 	char grades[5] = { 'D','A','F','C', 'F' };
-	//FillList(grades, 5);
+
 
 	for (int index = 0; index < 5; index++)
 		cout << grades[index] << endl;
@@ -60,7 +60,8 @@ char GetLowestGrade(char grades[], int size) {
 }
 
 void UpGradesByOne(char grades[], int size) {
-	for (int index = 0; index < size; index++) {
+	for (int index = 0; index < size; index++)
+	{
 		if (grades[index] == 'A' || grades[index] == 'a')
 			grades[index]--;// By alphabet rules B is greater than A hence --
 	}

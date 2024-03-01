@@ -1,22 +1,37 @@
-
+#include <iomanip>
 #include <iostream>
 using namespace std;
 
+void SumOfCols(int M[][4], int rows, int cols);
 
-double sumOFCols(int arr[3][4], int col)
+
+void SumOfCols(int M[][4], int rows, int cols)
 {
-	int sum = 0;
+	cout << "Column\t    Sum of Column Entries\n";
 
-	for (int i = 0; i < 3; i++)
+	for (int col = 0; col < cols; ++col)
 	{
-		sum += arr[i][col];
+		int sumOfCol = 0;
+
+		for (int row = 0; row < rows; ++row)
+		{
+			sumOfCol += M[row][col];
+		}
+		cout << "   " << left << setw(16) << col + 1 << sumOfCol << endl;
+
 	}
-	return sum;
 }
 
+int main() {
 
-int main()
-{
+	int M[3][4] = { {2,5,4,7},
+					{3,1,2,9},
+					{4,6,3,0}
+	};
+	int rows = 3;
+	int cols = 4;
 
+	SumOfCols(M, rows, cols);
+
+	return 0;
 }
-

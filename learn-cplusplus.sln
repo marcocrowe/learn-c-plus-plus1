@@ -13,7 +13,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetPay", "NetPay\NetPay.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exam", "Exam\Exam.vcxproj", "{25DAD479-199C-4ED7-B722-FDD91DAFAF96}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2D Array problem", "2D Array problem\2D Array problem.vcxproj", "{2251B285-A388-4C44-B8B9-9688BCFC7BA5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2D Array", "2D Array problem\2D Array problem.vcxproj", "{2251B285-A388-4C44-B8B9-9688BCFC7BA5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dataReading", "dataReading\dataReading.vcxproj", "{C55D618B-0D29-4B23-9DB7-30F017A6D171}"
 EndProject

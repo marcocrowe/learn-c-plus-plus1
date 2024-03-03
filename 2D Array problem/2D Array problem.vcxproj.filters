@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2D Array problem.cpp">
+    <ClCompile Include="2D Arrays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

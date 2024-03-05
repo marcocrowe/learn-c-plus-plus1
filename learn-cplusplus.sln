@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2D Array", "2D Array proble
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dataReading", "dataReading\dataReading.vcxproj", "{C55D618B-0D29-4B23-9DB7-30F017A6D171}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "height_Above_Sea_Level_Grid", "height_Above_Sea_Level_Grid\height_Above_Sea_Level_Grid.vcxproj", "{3D9D8116-F08F-445A-AC2D-B9F03957D430}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{C55D618B-0D29-4B23-9DB7-30F017A6D171}.Release|x64.Build.0 = Release|x64
 		{C55D618B-0D29-4B23-9DB7-30F017A6D171}.Release|x86.ActiveCfg = Release|Win32
 		{C55D618B-0D29-4B23-9DB7-30F017A6D171}.Release|x86.Build.0 = Release|Win32
+		{3D9D8116-F08F-445A-AC2D-B9F03957D430}.Debug|x64.ActiveCfg = Debug|x64
+		{3D9D8116-F08F-445A-AC2D-B9F03957D430}.Debug|x64.Build.0 = Debug|x64
+		{3D9D8116-F08F-445A-AC2D-B9F03957D430}.Debug|x86.ActiveCfg = Debug|Win32
+		{3D9D8116-F08F-445A-AC2D-B9F03957D430}.Debug|x86.Build.0 = Debug|Win32
+		{3D9D8116-F08F-445A-AC2D-B9F03957D430}.Release|x64.ActiveCfg = Release|x64
+		{3D9D8116-F08F-445A-AC2D-B9F03957D430}.Release|x64.Build.0 = Release|x64
+		{3D9D8116-F08F-445A-AC2D-B9F03957D430}.Release|x86.ActiveCfg = Release|Win32
+		{3D9D8116-F08F-445A-AC2D-B9F03957D430}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

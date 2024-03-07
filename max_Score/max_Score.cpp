@@ -9,7 +9,7 @@ int MaxScore(const char* filename)
 	int currentScore;
 	int maxScore = -1;
 
-	ifstream file(filename); // Open the file for reading
+	ifstream file(filename);
 
 	if (!file)
 	{
@@ -25,13 +25,13 @@ int MaxScore(const char* filename)
 		}
 	}
 
-	file.close(); // Close the file
+	file.close();
 	return maxScore;
 }
 
 int main()
 {
-	const char* filename = "scores.txt"; // The File with the scores
+	const char* filename = "scores.txt";
 	int highestScore = MaxScore(filename);
 
 	if (highestScore != -1)

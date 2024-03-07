@@ -1,15 +1,14 @@
 // CStringStuff.cpp
 
 
-
-#include "stdafx.h"
 #include <string>
-
+#include <iostream>
 using namespace std;
 
-int _tmain(int argc, _TCHAR* argv[])
-
+int main(int argc, char argv[])
 {
+
+
 
 	char greetings[] = "Hello";                     //initialized C-string
 
@@ -48,7 +47,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		int length1, length2;
 
 		length1 = strlen(name1);                   // get length of C-string
-
 		length2 = strlen(name2);
 
 		if (length1 != length2)
@@ -71,9 +69,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		cin >> response;
 
-		if ((response == 'Y') || (response == 'y'))
+		if ((response == 'Y') || (response == 'y'));
 
-			strcpy(name2, name1);                 // copy C-strings
+		strcpy_s(name2, name1);                 // copy C-strings
 
 
 
@@ -85,7 +83,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 
-	strcat(name1, name2);                           // concatenate two C-strings
+	strcpy_s(name1, name2);                           // concatenate two C-strings
 
 	cout << "Your name is now " << name1 << endl;
 

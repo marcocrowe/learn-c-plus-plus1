@@ -66,3 +66,4 @@ void UpGradesByOne(char grades[], int size) {
 			grades[index]--;// By alphabet rules B is greater than A hence --
 	}
 }
+

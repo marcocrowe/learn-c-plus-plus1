@@ -1,30 +1,43 @@
-
 #include <fstream>
 #include <iostream>
 using namespace std;
 
-void max_Score(int scores[])
+int MaxScore(const char* filename);
+
+int MaxScore(const char* filename)
 {
-	ifstream inFile("score.txt");
+	int currentScore;
+	int maxScore = -1;
 
-	int max = scores[0];
-	for (int i = 1; i < 5; i++)
+	ifstream file(filename); // Open the file for reading
+
+	if (!file)
 	{
-		if (scores[i] > max)
-			max = scores[i];
+		cerr << "Error opening file" << endl;
+		return -1;
 	}
-	cout << "The highest score is: " << max << endl;
 
+	while (file >> currentScore)
+	{
+		if (currentScore > maxScore)
+		{
+			maxScore = currentScore;
+		}
+	}
+
+	file.close(); // Close the file
+	return maxScore;
 }
-
 
 int main()
 {
+	const char* filename = "scores.txt"; // The File with the scores
+	int highestScore = MaxScore(filename);
 
-	int scores[5] = { 0,0,0,0,0 };
-	max_Score(scores);
+	if (highestScore != -1)
+	{
+		cout << "The maximum score in the file is: " << highestScore << endl;
+	}
+
 	return 0;
-
 }
-
-

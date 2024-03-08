@@ -1,10 +1,11 @@
 #include <fstream>
 #include <iostream>
+#include <string>
 using namespace std;
 
-int MaxScore(const char* filename);
+int MaxScore(const string& filename);
 
-int MaxScore(const char* filename)
+int MaxScore(const string& filename)
 {
 	int currentScore;
 	int maxScore = -1;
@@ -31,7 +32,7 @@ int MaxScore(const char* filename)
 
 int main()
 {
-	const char* filename = "scores.txt";
+	const string filename = "scores.txt"; // File with the scores
 	int highestScore = MaxScore(filename);
 
 	if (highestScore != -1)

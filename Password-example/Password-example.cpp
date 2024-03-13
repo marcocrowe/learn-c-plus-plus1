@@ -5,29 +5,28 @@ using namespace std;
 
 void checkpassword()
 {
-
-
 	string password;
-	cout << "Enter the password: ";
-	cin >> password;
-	if (password == "10092004")
+	int attempts = 0;
+
+	while (attempts < 10)
 	{
-		cout << "Access granted" << endl;
-	}
-	else
-	{
-		cout << "Access denied" << endl;
+		cout << "Enter the password: ";
+		cin >> password;
+
+		if (password == "10092004")
+		{
+			cout << "Access granted" << endl;
+			return;
+		}
+		else
+		{
+			attempts++;
+			cout << "Access denied" << endl;
+		}
 	}
 
-	else
-	{
-		if (!password)
-
-
-	}
+	cout << "You have exceeded the maximum number of attempts. You are locked out." << endl;
 }
-
-
 
 int main()
 {

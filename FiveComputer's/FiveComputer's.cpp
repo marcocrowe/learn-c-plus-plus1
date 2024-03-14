@@ -19,7 +19,7 @@ int main() {
 		}
 	}
 
-	// Close the file
+
 	file.close();
 
 	// Calculate and present the average usage for each lab over the week

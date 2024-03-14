@@ -9,7 +9,7 @@ int main() {
 	int usage[NUM_LABS][NUM_DAYS];
 
 	ifstream file;
-	file.open("values.txt");
+	file.open("values.txt"); //name of the file with data
 
 	// Read in the number of students using each lab over the week
 	for (int lab = 0; lab < NUM_LABS; lab++) {

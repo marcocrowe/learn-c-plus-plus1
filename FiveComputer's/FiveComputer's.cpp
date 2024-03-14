@@ -1,18 +1,26 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
+
 const int NUM_LABS = 5;
 const int NUM_DAYS = 7;
 
 int main() {
 	int usage[NUM_LABS][NUM_DAYS];
 
+	ifstream file;
+	file.open("values.txt");
+
 	// Read in the number of students using each lab over the week
 	for (int lab = 0; lab < NUM_LABS; lab++) {
 		for (int day = 0; day < NUM_DAYS; day++) {
-			cout << "Enter the number of students using Lab " << lab + 1 << " on Day " << day + 1 << ": ";
-			cin >> usage[lab][day];
+			// Read the value from the file and store it in the usage array
+			file >> usage[lab][day];
 		}
 	}
+
+	// Close the file
+	file.close();
 
 	// Calculate and present the average usage for each lab over the week
 	for (int lab = 0; lab < NUM_LABS; lab++) {

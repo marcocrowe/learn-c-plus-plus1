@@ -58,7 +58,6 @@ void PrintUsage(int usage[NUM_DAYS][NUM_LABS])
 		cout << "Lab " << lab + 1 << "\t";
 	cout << endl;
 
-
 	for (int day = 0; day < NUM_DAYS; day++)
 	{
 		cout << "Day " << day + 1 << ":\t";

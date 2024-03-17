@@ -3,7 +3,6 @@
 #include <fstream>
 using namespace std;
 
-
 void checkfile(ifstream& file);
 void checkfile(ifstream& file)
 {

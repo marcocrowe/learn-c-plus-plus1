@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProcessMarks", "ProcessMark
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PasswordExample", "PasswordExample\PasswordExample.vcxproj", "{8FAFB10F-95D5-44C6-B2E8-F4D60DFA074C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FunctionsGroupProject", "FunctionsGroupProject\FunctionsGroupProject.vcxproj", "{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -151,6 +153,14 @@ Global
 		{8FAFB10F-95D5-44C6-B2E8-F4D60DFA074C}.Release|x64.Build.0 = Release|x64
 		{8FAFB10F-95D5-44C6-B2E8-F4D60DFA074C}.Release|x86.ActiveCfg = Release|Win32
 		{8FAFB10F-95D5-44C6-B2E8-F4D60DFA074C}.Release|x86.Build.0 = Release|Win32
+		{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}.Debug|x64.ActiveCfg = Debug|x64
+		{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}.Debug|x64.Build.0 = Debug|x64
+		{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}.Debug|x86.ActiveCfg = Debug|Win32
+		{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}.Debug|x86.Build.0 = Debug|Win32
+		{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}.Release|x64.ActiveCfg = Release|x64
+		{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}.Release|x64.Build.0 = Release|x64
+		{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}.Release|x86.ActiveCfg = Release|Win32
+		{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

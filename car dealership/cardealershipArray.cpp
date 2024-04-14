@@ -5,6 +5,7 @@ using namespace std;
 
 void printTable()
 {
+
 	cout << "Car Model\tMeaning" << endl;
 	cout << "1\t\tSedan" << endl;
 	cout << "2\t\tSUV" << endl;

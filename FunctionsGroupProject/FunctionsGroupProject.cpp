@@ -36,8 +36,6 @@ void Sort(int array[], int size);
 
 void MenuChoices(int array[], int size)
 {
-	system("pause");
-	system("cls");
 	cout << "-----------------------------------------------------------------" << endl;
 	cout << "select " << MENU_PRINT_CODE << " to Display the Numbers in the array" << endl;
 	cout << "select " << MENU_TOTAL_CODE << " to Get the Total of the Numbers in the array" << endl;
@@ -52,15 +50,12 @@ void MenuChoices(int array[], int size)
 	cout << "select " << MENU_SORT_CODE << " to Sort the Numbers in the array" << endl;
 	cout << "select " << MENU_EXIT_CODE << " to Exit the program" << endl;
 	cout << "----------------------------------------------------------------" << endl;
-
-
-	cout << "Enter your choice: ";
 }
 
 
 void populateArray(int array[], int size)
 {
-	ifstream inputFile("Values.txt");
+	ifstream inputFile("Numbers.dat");
 	if (!inputFile)
 	{
 		cout << "Failed to open file." << endl;
@@ -96,10 +91,14 @@ void populateArray(int array[], int size)
 void UserChoiceInput(int array[], int size)
 {
 	int selectionCode;
-	cin >> selectionCode;
 
-	while (selectionCode != MENU_EXIT_CODE)
+	do
 	{
+		system("cls");
+		MenuChoices(array, size);
+
+		cout << "Enter your choice: ";
+		cin >> selectionCode;
 
 		switch (selectionCode)
 		{
@@ -151,24 +150,22 @@ void UserChoiceInput(int array[], int size)
 			cout << "Invalid choice" << endl;
 			break;
 		}
-
-
 		cout << endl;
-		MenuChoices(array, size);
-
-		cout << "Enter your choice: ";
-		cin >> selectionCode;
-	}
+		system("pause");
+	} while (selectionCode != MENU_EXIT_CODE);
 	cout << "Exiting the program" << endl;
 }
 
 void Display(int array[], int size)
 {
-	for (int i = 0; i < size; i++)
-	{
-		cout << array[i] << " ";
-	}
-	cout << endl;
+	cout << "[";
+
+	for (int i = 0; i < size && i < 1; i++)
+		cout << array[i];
+	for (int i = 1; i < size; i++)
+		cout << ", " << array[i];
+
+	cout << "]" << endl;
 }
 
 void GetTotal(int array[], int size)

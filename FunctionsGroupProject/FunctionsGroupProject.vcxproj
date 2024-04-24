@@ -130,7 +130,8 @@
     <ClCompile Include="FunctionsGroupProject.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Downloads\SP ProjSpec (1).pdf" />
+    <None Include="development-notes.md" />
+    <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

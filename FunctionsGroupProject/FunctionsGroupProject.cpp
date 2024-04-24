@@ -69,7 +69,7 @@ void populateArray(int array[], int size)
 
 	else if (inputFile.peek() == ifstream::traits_type::eof())
 	{
-		cout << "The file is empty (Please enter at least 50 indenture values)" << endl;
+		cout << "The file is empty (Please enter at least 50 integers values)" << endl;
 		exit(1);
 		return;
 	}
@@ -188,7 +188,7 @@ void GetAverage(int array[], int size)
 	{
 		total += array[i];
 	}
-	cout << "The average of the array is: " << total / size << endl;
+	cout << "The average of the array is: " << (double)total / size << endl;
 }
 
 void GetLargest(int array[], int size)

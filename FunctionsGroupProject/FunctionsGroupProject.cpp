@@ -34,6 +34,7 @@ void RemoveNumber(int array[], int& size);
 void Sort(int array[], int size);
 
 
+
 void MenuChoices(int array[], int size)
 {
 	cout << "-----------------------------------------------------------------" << endl;
@@ -146,6 +147,10 @@ void UserChoiceInput(int array[], int size)
 			Sort(array, size);
 			break;
 
+		case MENU_EXIT_CODE:
+			cout << "Exiting the program" << endl;
+			break;
+
 		default:
 			cout << "Invalid choice" << endl;
 			break;
@@ -153,7 +158,7 @@ void UserChoiceInput(int array[], int size)
 		cout << endl;
 		system("pause");
 	} while (selectionCode != MENU_EXIT_CODE);
-	cout << "Exiting the program" << endl;
+
 }
 
 void Display(int array[], int size)
@@ -318,6 +323,7 @@ void Sort(int array[], int size)
 	}
 	cout << "The array has been sorted in ascending order" << endl;
 }
+
 
 int main()
 {

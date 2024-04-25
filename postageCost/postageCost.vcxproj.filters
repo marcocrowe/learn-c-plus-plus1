@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FInal-Exam.cpp">
+    <ClCompile Include="postageCost.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

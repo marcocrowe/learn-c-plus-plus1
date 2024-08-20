@@ -2,79 +2,89 @@
 #include <fstream>
 using namespace std;
 
-const int NUM_LABS = 5;
-const int NUM_DAYS = 7;
+const int COLS = 5;
+const int ROWS = 7;
 
-
-void CalculateLabsAvarages(int  usage[NUM_DAYS][NUM_LABS], double labsAvarages[NUM_LABS]);
-void PrintLabsAvarages(double labsAvarages[NUM_LABS]);
-void PrintUsage(int usage[NUM_DAYS][NUM_LABS]);
-void ReadLabUsageFile(int  usage[NUM_DAYS][NUM_LABS]);
-
+void CalculateColumnAverages(int usage[ROWS][COLS], double labsAvarages[COLS]);
+void PrintLabsAvarages(double labsAvarages[COLS]);
+void PrintUsage(int usage[ROWS][COLS]);
+void ReadLabUsageFile(int usage[ROWS][COLS]);
 
 int main()
 {
-	int usage[NUM_DAYS][NUM_LABS];
-	ReadLabUsageFile(usage);
-	PrintUsage(usage);
+    int usage[ROWS][COLS];
+    ReadLabUsageFile(usage);
+    PrintUsage(usage);
 
-	double labsAvarages[NUM_LABS];
-	CalculateLabsAvarages(usage, labsAvarages);
-	PrintLabsAvarages(labsAvarages);
+    double labsAvarages[COLS];
+    CalculateColumnAverages(usage, labsAvarages);
+    PrintLabsAvarages(labsAvarages);
 
-	return 0;
+    return 0;
 }
 
-void CalculateLabsAvarages(int usage[NUM_DAYS][NUM_LABS], double labsAvarages[NUM_LABS])
+void CalculateColumnAverages(int array[ROWS][COLS], double averages[COLS])
 {
-	for (int lab = 0; lab < NUM_LABS; lab++)
-	{
-		double sum = 0;
-		for (int day = 0; day < NUM_DAYS; day++)
-		{
-			sum += usage[day][lab];
-		}
-		labsAvarages[lab] = sum / NUM_DAYS;
-	}
+    for (int col = 0; col < COLS; col++)
+    {
+        double sum = 0;
+        for (int row = 0; row < ROWS; row++)
+        {
+            sum += array[row][col];
+        }
+        averages[col] = sum / ROWS;
+    }
 }
 
-void PrintLabsAvarages(double labsAvarages[NUM_LABS])
+void CalculateRowAverages(int array[ROWS][COLS], double averages[ROWS])
 {
-	for (int lab = 0; lab < NUM_LABS; lab++)
-	{
-		cout << "Lab " << lab + 1 << " average usage: " << labsAvarages[lab] << endl;
-	}
+    for (int row = 0; row < ROWS; row++)
+    {
+        double sum = 0;
+        for (int col = 0; col < COLS; col++)
+        {
+            sum += array[row][col];
+        }
+        averages[row] = sum / COLS;
+    }
+}
+
+void PrintLabsAvarages(double labsAvarages[COLS])
+{
+    for (int lab = 0; lab < COLS; lab++)
+    {
+        cout << "Lab " << lab + 1 << " average usage: " << labsAvarages[lab] << endl;
+    }
 }
 
 /// <summary>
 /// Print the usage of the labs
 /// </summary>
 /// <param name="usage"></param>
-void PrintUsage(int usage[NUM_DAYS][NUM_LABS])
+void PrintUsage(int usage[ROWS][COLS])
 {
-	cout << "Day\t";
+    cout << "Day\t";
 
-	for (int lab = 0; lab < NUM_LABS; lab++)
-		cout << "Lab " << lab + 1 << "\t";
-	cout << endl;
+    for (int lab = 0; lab < COLS; lab++)
+        cout << "Lab " << lab + 1 << "\t";
+    cout << endl;
 
-
-	for (int day = 0; day < NUM_DAYS; day++)
-	{
-		cout << "Day " << day + 1 << ":\t";
-		for (int lab = 0; lab < NUM_LABS; lab++)
-			cout << usage[day][lab] << "\t";
-		cout << endl;
-	}
-	cout << endl;
+    for (int day = 0; day < ROWS; day++)
+    {
+        cout << "Day " << day + 1 << ":\t";
+        for (int lab = 0; lab < COLS; lab++)
+            cout << usage[day][lab] << "\t";
+        cout << endl;
+    }
+    cout << endl;
 }
-void ReadLabUsageFile(int usage[NUM_DAYS][NUM_LABS])
+void ReadLabUsageFile(int usage[ROWS][COLS])
 {
-	ifstream file;
-	file.open("values.txt");
+    ifstream file;
+    file.open("values.txt");
 
-	for (int day = 0; day < NUM_DAYS; day++)
-		for (int lab = 0; lab < NUM_LABS; lab++)
-			file >> usage[day][lab];
-	file.close();
+    for (int day = 0; day < ROWS; day++)
+        for (int lab = 0; lab < COLS; lab++)
+            file >> usage[day][lab];
+    file.close();
 }

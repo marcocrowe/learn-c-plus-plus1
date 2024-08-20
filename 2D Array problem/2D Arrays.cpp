@@ -2,36 +2,45 @@
 #include <iostream>
 using namespace std;
 
-void SumOfCols(int M[][4], int rows, int cols);
+const int ROWS = 50;
+const int COLS = 20;
 
+const double EQUAL_PERCENTAGE_RATE = 95.0;
 
-void SumOfCols(int M[][4], int rows, int cols)
-{
-	cout << "Column\t    Sum of Column Entries\n";
-
-	for (int col = 0; col < cols; ++col)
-	{
-		int sumOfCol = 0;
-
-		for (int row = 0; row < rows; ++row)
-		{
-			sumOfCol += M[row][col];
-		}
-		cout << "   " << left << setw(16) << col + 1 << sumOfCol << endl;
-
-	}
-}
+void readFromFile(int bitMap[][COLS], int rows, int cols, string fileName);
+bool areBitmapsEqual(int bitMap1[][COLS], int bitMap2[][COLS], int rows, int cols);
 
 int main() {
 
-	int M[3][4] = { {2,5,4,7},
-					{3,1,2,9},
-					{4,6,3,0}
-	};
-	int rows = 3;
-	int cols = 4;
+    int bitMap1[ROWS][COLS] ;
+    int bitMap2[ROWS][COLS] ;
 
-	SumOfCols(M, rows, cols);
+    readFromFile(bitMap1, ROWS, COLS, "bitmap1.dat");
+    readFromFile(bitMap2, ROWS, COLS, "bitmap2.dat");
+
+    bool isEqual = areBitmapsEqual(bitMap1, bitMap2, ROWS, COLS);
+
+    if (isEqual)
+        cout << "The bitmaps are equal\n";
+    else
+        cout << "The bitmaps are not equal\n";
 
 	return 0;
 }
+
+bool areBitmapsEqual(int bitMap1[][COLS], int bitMap2[][COLS], int rows, int cols)
+{
+    int equalCount = 0;
+    for (int rowIndex = 0; rowIndex < rows; rowIndex++)
+    {
+        for (int colIndex = 0; colIndex < cols; colIndex++)
+        {
+            if (bitMap1[rowIndex][colIndex] == bitMap2[rowIndex][colIndex])
+                equalCount++;
+        }
+    }
+    int totalElements = rows * cols;
+    double equalPercentage = ((double) equalCount / totalElements) * 100;
+    return equalPercentage >= EQUAL_PERCENTAGE_RATE;
+}
+
